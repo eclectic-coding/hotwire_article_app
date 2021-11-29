@@ -10,11 +10,12 @@ gem "jsbundling-rails", "~> 0.1.0"
 gem "cssbundling-rails"
 gem "turbo-rails", ">= 0.7.11"
 gem "stimulus-rails", ">= 0.4.0"
-gem "jbuilder", "~> 2.7"
+# gem "jbuilder", "~> 2.7"
 gem "redis", "~> 4.0"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 gem "bootsnap", ">= 1.4.4", require: false
 gem "faker", "~> 2.18"
+gem "sorcery"
 
 group :development, :test do
   gem "debug", ">= 1.0.0", platforms: %i[mri mingw x64_mingw]
