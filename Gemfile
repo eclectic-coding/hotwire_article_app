@@ -16,12 +16,15 @@ gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 gem "bootsnap", ">= 1.4.4", require: false
 gem "faker", "~> 2.18"
 gem "sorcery"
+gem "friendly_id"
 
 group :development, :test do
   gem "debug", ">= 1.0.0", platforms: %i[mri mingw x64_mingw]
   gem "standard", "~> 1.1", ">= 1.1.5", require: false
   gem "capybara"
   gem "webdrivers"
+  gem "rspec-rails", "~> 5.0", ">= 5.0.1"
+  gem "factory_bot_rails"
 end
 
 group :development do
@@ -33,15 +36,12 @@ group :development do
   gem "rubocop", "~> 1.18"
   gem "rubocop-rails", "~> 2.11", ">= 2.11.3", require: false
   gem "rubocop-rspec", "~> 2.4"
-  gem "factory_bot_rails", "~> 6.2"
 end
 
 group :test do
   gem "simplecov", "~> 0.21.2", require: false
-  gem "rspec-rails", "~> 5.0", ">= 5.0.1"
 end
 
 group :production do
   gem "pg", "~> 1.2", ">= 1.2.3"
 end
-
