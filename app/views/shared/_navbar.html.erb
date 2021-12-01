@@ -16,7 +16,7 @@
         <ul class="navbar-nav mb-2 mb-lg-0 dropdown">
           <% if logged_in? %>
             <a class="nav-link dropdown-toggle mr-2" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <%#= image_tag avatar_path(current_user, size: 40), width: 20, height: 20, class: "rounded me-1" %>
+              <%= image_tag avatar_path(current_user, size: 40), width: 20, height: 20, class: "rounded me-1", alt: "Profile image" %>
               <%= current_user.name %>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
