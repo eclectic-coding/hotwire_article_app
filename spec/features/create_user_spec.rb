@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.feature "Create Users", type: :feature do
+RSpec.describe "Create Users", type: :feature do
   let(:user) { create(:user) }
 
   before do

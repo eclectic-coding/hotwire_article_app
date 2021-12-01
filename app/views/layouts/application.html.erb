@@ -12,8 +12,8 @@
   <body class="d-flex flex-column h-100">
     <%= render "shared/navbar" %>
     <main class="flex-shrink-0" role="main">
-      <p><%= notice %></p>
       <div class="container">
+        <%= render "shared/messages" %>
         <%= yield %>
       </div>
     </main>
