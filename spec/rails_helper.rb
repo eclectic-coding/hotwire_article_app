@@ -17,9 +17,15 @@ end
 
 RSpec.configure do |config|
   config.include FactoryBot::Syntax::Methods
-  config.include Sorcery::TestHelpers::Rails::Integration, type: :request
+  config.include Sorcery::TestHelpers::Rails::Integration, type: :feature
   config.use_transactional_fixtures = true
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
   config.fuubar_progress_bar_options = {format: "Completed Tests <%B> %p%% %a"}
+end
+
+Rails.application.config.sorcery.configure do |config|
+  config.user_config do |user|
+    user.encryption_algorithm = :md5 if Rails.env.test?
+  end
 end
